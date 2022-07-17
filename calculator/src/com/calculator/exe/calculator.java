@@ -10,7 +10,7 @@ public class calculator {
         System.out.println("Enter the second Number");
         int b = sc.nextInt();                            //accepting the second integer
         if(a==0 && b == 0){
-            System.out.println("Both zeroes causes Exceptions to coccur so \nProgram         Closing             Shortly\n");
+            System.out.println("Both zeroes causes Exceptions to occur so \nProgram         Closing             Shortly\n");
         }
         else{
             System.out.println("Enter the operation \nIf you need to :\nADD = 1\nSubtract = 2\nDivide = 3\nMultiply = 4\nFind the remainder = 5"); //giving the user a list of operations in form of numbers
