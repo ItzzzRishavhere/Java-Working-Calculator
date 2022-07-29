@@ -17,6 +17,9 @@ public class calculator {
         if(b == 0 && c == '/') { 
             System.out.println("Division By 0 Is Not Possible For A Java Program To Calculate");
         }
+        else if(b == 0 && c == '%'){
+            System.out.println("Division By 0 Is Not Possible For A Java Program To Calculate");
+        }
         else {
             switch (c) {
                 case '+':
