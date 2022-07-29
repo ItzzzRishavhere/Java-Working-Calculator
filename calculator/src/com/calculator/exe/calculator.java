@@ -1,43 +1,54 @@
 package com.calculator.exe;
-import java.util.*; //importing java.util.* for using scanner in order to accept input from user
+import java.util.*;
+
 public class calculator {
     public static void main(String[] args) {
-        //input
-
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the first number");
-        int a = sc.nextInt();                            //accepting the first integer
-        System.out.println("Enter the second Number");
-        int b = sc.nextInt();                            //accepting the second integer
-        if(a==0 && b == 0){
-            System.out.println("Both zeroes causes Exceptions to occur so \nProgram         Closing             Shortly\n");
+
+        System.out.println("Enter operation");
+        char c = sc.next().charAt(0);
+
+        System.out.println("Enter The First Number");
+        int a = sc.nextInt();
+
+        System.out.println("Enter The Second Number");
+        int b = sc.nextInt();
+
+        if(b == 0 && c == '/') { 
+            System.out.println("Division By 0 Is Not Possible For A Java Program To Calculate");
         }
-        else{
-            System.out.println("Enter the operation \nIf you need to :\nADD = 1\nSubtract = 2\nDivide = 3\nMultiply = 4\nFind the remainder = 5"); //giving the user a list of operations in form of numbers
-            int c = sc.nextInt();                         //accepting the operation ,here integer
-
-
-            if (c == 1) {
-                int d = a + b;            //addition
-                System.out.println("You wanna add right !! Here is the answer : " + d + "\nProgram         Closing             Shortly\n ");      //passes if for addition
-            } else if (c == 2) {
-                int e = a - b;            //subtraction
-                System.out.println("You wanna subtract right !! Here is the answer : " + e + "\nProgram         Closing             Shortly\n ");     //passes for subtraction
-            } else if (c == 3) {
-                int f = a / b;            //division
-                System.out.println("You wanna divide right !! Here is the answer : " + f + "\nProgram         Closing             Shortly\n ");       //passes for division
-            } else if (c == 4) {
-                int g = a * b;            //multiplication
-                System.out.println("You wanna multiply right !! Here is the answer : " + g + "\nProgram         Closing             Shortly\n ");     //passes for multiplication
-            } else if (c == 5) {
-                int h = a % b;            //finding the remainder (modulus)
-                System.out.println("You wanna find the remainder right !! Here is the answer : " + h + "\nProgram         Closing             Shortly\n ");   //passes for finding remainder
+        else {
+            switch (c) {
+                case '+':
+                    int d= a+b;
+                    System.out.println(d);
+                    break;
+                case '-':
+                    int e= a-b;
+                    System.out.println(e);
+                    break;  
+                case '*':
+                    int f= a * b;
+                    System.out.println(f); 
+                    break;
+                case '/':
+                    int g= a / b;
+                    System.out.println(g);
+                    break;
+                case '%':
+                    int h = a % b;
+                    System.out.println(h);
+                    break;
+                default:
+                    System.out.println("Invalid Operator");
+                    
             }
-
         }
-
-        System.out.println("Made By Rishav Digar\nGitHub - ItzzzRishavhere");
-
-
+        /*@author Rishav Digar
+          Follow for more :-)                  
+        */
+       
+        
     }
-}
+    }
+
